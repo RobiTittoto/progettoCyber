@@ -209,13 +209,19 @@ In particular, the modified APK in this case requests permissions that are clear
 ## References and Further Reading
 
 https://apktool.org/
+
 https://ngrok.com/docs/universal-gateway/tcp/
 
+https://github.com/rapid7/metasploit-framework/tree/master/documentation/modules/payload/android/meterpreter
 
 I took inspiration from some youtube videos:
+
 https://www.youtube.com/watch?v=a78hgTbwO8A&list=PLImXEmIWS83emJW4XsnX1xtIlYNjbVB_s&index=2
+
 https://www.youtube.com/watch?v=AT-1_uJjA7M&t=117s
+
 https://youtu.be/nhirxy6tWzA?si=X3-YK0VhH-zZo3Yo
 
 I used as support
+
 http://chatgpt.com/
