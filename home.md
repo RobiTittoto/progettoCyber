@@ -51,6 +51,7 @@ For this demonstration, a Flappy Bird APK downloaded from APKpure.com was utiliz
 #### Ngrok Tunnel Configuration
 
 To establish a connection pathway from the victim device to our attack infrastructure, I configured Ngrok to create a secure tunnel. 
+
 Ngrok provides a public endpoint that forwards traffic to our local attack machine.
 
 **Command executed:**
@@ -111,7 +112,7 @@ This ensures the malicious payload executes immediately when the application lau
 
 ```apktool b app_decoded -o mod.apk```
 
-Digital Signature Application
+#### Digital Signature Application
 
 **Since Android requires all applications to be digitally signed, I applied a self-signed certificate:**
 
@@ -123,19 +124,26 @@ Note: In a real attack scenario, attackers might use stolen certificates or crea
 
 #### Distribution Vector
 
-**The modified APK was distributed through a simulated social engineering campaign using a Telegram channel. This demonstrates how attackers commonly distribute malicious applications through:**
+**The modified APK was distributed through a simulated social engineering campaign using a Telegram channel. **
+I easily generated a fake description using ChatGPT and download an image from the official website
 
-Unofficial app stores
+(telegram.png)
 
-Social media platforms
+This demonstrates how attackers commonly distribute malicious applications through:
 
-Messaging applications
+- Unofficial app stores
 
-Email attachments
+- Social media platforms
 
-Compromised websites
+- Messaging applications
 
-Installation Process
+- Email attachments
+
+- Compromised websites
+
+- Installation Process
+
+
 
 **When victims attempt to install the APK:**
 
