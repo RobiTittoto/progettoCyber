@@ -127,7 +127,7 @@ Note: In a real attack scenario, attackers might use stolen certificates or crea
 **The modified APK was distributed through a simulated social engineering campaign using a Telegram channel. **
 I easily generated a fake description using ChatGPT and download an image from the official website
 
-(telegram.png)
+![Fake tlegram channel](telegram.png)
 
 This demonstrates how attackers commonly distribute malicious applications through:
 
