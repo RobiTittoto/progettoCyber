@@ -48,6 +48,8 @@ To establish a connection pathway from the victim device to our attack infrastru
 ```ngrok tcp 4444```
 
 This creates a TCP tunnel on port 4444, providing us with a public domain and port combination that will be used in our payload configuration.
+![Output comando](ngrok.png)
+
 
 ### 3. Payload Generation
 
