@@ -18,7 +18,7 @@ This report documents a cybersecurity demonstration showcasing the process of in
 6. Remote access establishment
 
 ## Technical Implementation
-### 0.Setup
+### 0. Setup
 Before proceeding with the APK manipulation demonstration, it is essential to establish a proper testing environment with all necessary tools and prerequisites.
 #### Required Tools and Platform
 
@@ -58,6 +58,7 @@ Ngrok provides a public endpoint that forwards traffic to our local attack machi
 ```ngrok tcp 4444```
 
 This creates a TCP tunnel on port 4444, providing us with a public domain and port combination that will be used in our payload configuration.
+
 ![Output comando](ngrok.png)
 
 
@@ -90,11 +91,13 @@ This generates the necessary Smali code and resources required for the reverse s
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 ```
-Smali Code Integration
+Permissions were copied from the payload's AndroidManifest.xml file to ensure full functionality of the injected malicious code.
 
-Metasploit folder integration: Copied the entire com/metasploit/ directory from the payload's decompiled structure to the target application's directory structure.
+#### Smali Code Integration
 
-Activity modification: Modified the main activity file (com/unity3d/player/UnityPlayerActivity.smali) to trigger the malicious payload during application startup.
+1. **Metasploit folder integration**: Copied the entire com/metasploit/ directory from the payload's decompiled structure to the target application's directory structure.
+
+2. **Activity modification**: Modified the main activity file (com/unity3d/player/UnityPlayerActivity.smali) to trigger the malicious payload during application startup.
 
 Code injection location: Within the onCreate method
 
