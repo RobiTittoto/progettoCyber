@@ -184,7 +184,7 @@ Upon approval, the malicious payload becomes active
 
 **Once the victim launches the infected application:**
 
-The injected payload executes automatically
+The application work normally meanwhile the injected payload executes automatically
 
 A reverse TCP connection is established through the Ngrok tunnel
 
