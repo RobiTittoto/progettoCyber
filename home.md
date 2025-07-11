@@ -57,11 +57,12 @@ Command executed:
 ```ngrok tcp 4444```
 
 Command's output:
+
 ![Output ngrok](ngrok.png)
 
 #### Ngrok Tunnel Operation Details:
 
-When executing the ngrok tcp 4444 command, a secure connection is established between the local computer and Ngrok's servers. This process creates a tunneling mechanism that operates as follows:
+When executing the *ngrok tcp 4444 command*, a secure connection is established between the local computer and Ngrok's servers. This process creates a tunneling mechanism that operates as follows:
 
 1. **Public Service Exposure**: Ngrok initiates a procedure that publicly exposes any TCP service listening on port 4444 of the local computer to the Internet.
 2. **Dynamic Address Assignment**: The service provides a public address in the format tcp://X.tcp.ngrok.io:YYYYY, where:
