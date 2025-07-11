@@ -114,7 +114,8 @@ Permissions were copied from the payload's AndroidManifest.xml file to ensure fu
 
 1. **Metasploit folder integration**: Copied the entire com/metasploit/ directory from the payload's decompiled structure to the target application's directory structure.
 
-2. **Activity modification**: Modified the main activity file (com/unity3d/player/UnityPlayerActivity.smali) to trigger the malicious payload during application startup.
+2. **Activity modification**: By analyzing the AndroidManifest.xml, I identified the main activity as UnityPlayerActivity.
+Therefore, I modified the corresponding Smali file (com/unity3d/player/UnityPlayerActivity.smali) by injecting code to trigger the malicious payload during application startup.
 
 The injection point was the onCreate method of the UnityPlayerActivity class, ensuring execution at launch.
 
