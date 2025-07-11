@@ -19,7 +19,7 @@ This report documents a cybersecurity demonstration showcasing the process of in
 
 ## Technical Implementation
 ### 0. Setup
-Before proceeding with the APK manipulation demonstration, it is essential to establish a proper testing environment with all necessary tools and prerequisites.
+Before proceeding with the APK manipulation demonstration, it is necessary to establish a proper testing environment with all necessary tools and prerequisites.
 #### Required Tools and Platform
 
 - Kali Linux Virtual Machine: Primary attack platform containing pre-installed penetration testing tools including the Metasploit Framework
