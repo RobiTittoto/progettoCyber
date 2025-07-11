@@ -196,7 +196,7 @@ Full device compromise is achieved
 
 ## Security Implications
 
-#### Attack Capabilities
+##### Attack Capabilities
 
 **Once the connection is established, attackers can:**
 
