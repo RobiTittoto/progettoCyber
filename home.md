@@ -4,7 +4,7 @@ Roberto Tittoto
 
 ## Executive Summary
 
-This report documents a cybersecurity demonstration showcasing the process of injecting malicious payloads into legitimate Android applications (APKs). The demonstration illustrates how attackers can compromise mobile applications and establish unauthorized remote connections to victim devices.
+This report documents a cybersecurity demonstration showcasing the process of injecting malicious payloads into legitimate Android applications (APKs). The demonstration shows how attackers can turn legitimate applications into remote access tools to compromise victim devices.
 
 ## Methodology Overview
 
@@ -36,7 +36,7 @@ For this demonstration, a Flappy Bird APK downloaded from APKpure.com was utiliz
 
 ```apktool d FlappyBird.apk -o app_decoded```
 
-**This command extracts the APK contents, including:**
+**This command extracts the contents of the APK, including:**
 
 - AndroidManifest.xml (application permissions and components)
 
@@ -50,7 +50,7 @@ For this demonstration, a Flappy Bird APK downloaded from APKpure.com was utiliz
 
 #### Ngrok Tunnel Configuration
 
-To establish a connection pathway from the victim device to mine attack infrastructure, I configured Ngrok to create a secure tunnel. Ngrok provides a public endpoint that forwards traffic to our local attack machine.
+To establish a connection pathway from the victim device to my attack infrastructure, I configured Ngrok to create a secure tunnel. Ngrok provides a public endpoint that forwards traffic to our local attack machine.
 
 ##### Command executed:
 
@@ -93,7 +93,7 @@ Using Metasploit's msfvenom tool, I generated a malicious Android payload config
 
 ```apktool d payload.apk -o payload_decoded```
 
-This generates the necessary Smali code and resources required for the reverse shell functionality.
+This provides the necessary Smali code and resources to implement reverse shell functionality.
 
 ### 4. Malicious Code Injection
 
@@ -116,7 +116,7 @@ Permissions were copied from the payload's AndroidManifest.xml file to ensure fu
 
 2. **Activity modification**: Modified the main activity file (com/unity3d/player/UnityPlayerActivity.smali) to trigger the malicious payload during application startup.
 
-Code injection location: Within the onCreate method
+The injection point was the onCreate method of the UnityPlayerActivity class, ensuring execution at launch.
 
 ```invoke-static {p0}, Lcom/metasploit/stage/Payload;->start(Landroid/content/Context;)V```
 
@@ -142,7 +142,7 @@ Note: In a real attack scenario, attackers might use stolen certificates or crea
 
 **The modified APK was distributed through a simulated social engineering campaign using a Telegram channel.**
 
-I easily generated a fake description using ChatGPT and download an image from the official website
+I easily generated a fake description using ChatGPT and downloaded an image from the official website
 
 ![Fake tlegram channel](telegram.png)
 
@@ -184,13 +184,13 @@ Upon approval, the malicious payload becomes active
 
 **Once the victim launches the infected application:**
 
-The application work normally meanwhile the injected payload executes automatically
+The application works normally while the injected payload executes in the background.
 
-A reverse TCP connection is established through the Ngrok tunnel
+A reverse TCP connection is established through the Ngrok tunnel.
 
-The attacker gains Meterpreter shell access to the device
+The attacker gains Meterpreter shell access to the device.
 
-Full device compromise is achieved
+At this point, full control over the device is achieved through the Meterpreter session.
 
 ## Security Implications
 
