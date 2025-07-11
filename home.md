@@ -65,9 +65,9 @@ Command's output:
 When executing the *ngrok tcp 4444* command, a secure connection is established between the local computer and Ngrok's servers. This process creates a tunneling mechanism that operates as follows:
 
 1. **Public Service Exposure**: Ngrok initiates a procedure that publicly exposes any TCP service listening on port 4444 of the local computer to the Internet.
-2. **Dynamic Address Assignment**: The service provides a public address in the format tcp://X.tcp.ngrok.io:YYYYY, where:
- - X represents a randomly assigned hostname by Ngrok servers
- - YYYYY represents a randomly assigned port number by Ngrok servers
+2. **Dynamic Address Assignment**: The service provides a public address in the format *tcp://X.tcp.ngrok.io:YYYYY*, where:
+ - *X* represents a randomly assigned hostname by Ngrok servers
+ - *YYYYY* represents a randomly assigned port number by Ngrok servers
 
 3. **Tunnel Establishment**: A secure tunnel is established between the local computer and Ngrok’s servers. The Ngrok client receives incoming traffic through this tunnel and forwards it locally to port 4444 on the machine executing the command.
 This setup creates a bidirectional communication channel, where external traffic sent to the public Ngrok endpoint is seamlessly forwarded to the local service.
