@@ -210,8 +210,6 @@ Full device compromise is achieved
 
 - Exfiltrate sensitive information
 
--  Detection Challenges
-
 
 ## Conclusion
 
