@@ -12,14 +12,14 @@ This report documents a cybersecurity demonstration showcasing the process of in
 
 ## Indice
 
-- [0. Setup](#0-setup)
-- [1. APK Decompilation](#1-apk-decompilation)
-- [2. Network Infrastructure Setup](#2-network-infrastructure-setup)
-- [3. Payload Generation](#3-payload-generation)
-- [4. Malicious Code Injection](#4-malicious-code-injection)
-- [5. Application Recompilation and Signing](#5-application-recompilation-and-signing)
-- [6. Social Engineering Distribution](#6-social-engineering-distribution)
-- [7. Attack Infrastructure and Remote Access](#7-attack-infrastructure-and-remote-access)
+1. [Setup](#0-setup)
+2. [APK Decompilation](#1-apk-decompilation)
+3. [Network Infrastructure Setup](#2-network-infrastructure-setup)
+4. [Payload Generation](#3-payload-generation)
+5. [Malicious Code Injection](#4-malicious-code-injection)
+6. [Application Recompilation and Signing](#5-application-recompilation-and-signing)
+7. [Social Engineering Distribution](#6-social-engineering-distribution)
+8. [Attack Infrastructure and Remote Access](#7-attack-infrastructure-and-remote-access)
 
 
 ## Technical Implementation
