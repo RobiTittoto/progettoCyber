@@ -22,11 +22,11 @@ This report documents a cybersecurity demonstration showcasing the process of in
 Before proceeding with the APK manipulation demonstration, it is necessary to establish a proper testing environment with all necessary tools and prerequisites.
 #### Required Tools and Platform
 
-- Kali Linux Virtual Machine: Primary attack platform containing pre-installed penetration testing tools including the Metasploit Framework
-- APKTool: Android application reverse engineering tool for decompiling and recompiling APK files
-- Jarsigner: Java Archive Signing tool for digitally signing Android applications
-- Ngrok: Secure tunneling service for exposing local servers to the internet
-- Telegram Channel: Social engineering distribution platform for malicious APK deployment
+- **Kali Linux Virtual Machine**: Primary attack platform containing pre-installed penetration testing tools including the Metasploit Framework
+- **APKTool**: Android application reverse engineering tool for decompiling and recompiling APK files
+- **Jarsigner**: Java Archive Signing tool for digitally signing Android applications
+- **Ngrok**: Secure tunneling service for exposing local servers to the internet
+- **Telegram Channel**: Social engineering distribution platform for malicious APK deployment
 
 ### 1. APK Decompilation
 
