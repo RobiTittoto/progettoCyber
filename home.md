@@ -58,7 +58,7 @@ To establish a connection pathway from the victim device to my attack infrastruc
 
 Command's output:
 
-![Output ngrok](ngrok.png)
+![Output ngrok](images/ngrok.png)
 
 #### Ngrok Tunnel Operation Details:
 
@@ -76,7 +76,7 @@ This setup creates a bidirectional communication channel, where external traffic
 
 In our demonstration, TCP traffic directed to the address ```6.tcp.eu.ngrok.io:16690``` is automatically transmitted by Ngrok to port 4444 of the attacker's computer, creating a seamless communication channel that bypasses typical network security barriers.
 
-![ngrok map](ngrokmap.jpg)
+![ngrok map](images/ngrokmap.jpg)
 
 
 ### 3. Payload Generation
@@ -145,7 +145,7 @@ Note: In a real attack scenario, attackers might use stolen certificates or crea
 
 I easily generated a fake description using ChatGPT and downloaded an image from the official website
 
-![Fake tlegram channel](telegram.png)
+![Fake tlegram channel](images/telegram.png)
 
 This demonstrates how attackers commonly distribute malicious applications through:
 
